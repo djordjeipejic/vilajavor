@@ -40,11 +40,11 @@
     <!-- VIDEO POZADINA — snimljeno preko Higgsfield-a (bez teksta/logotipa/dugmadi).
          Slobodno zameni assets/hero-video.mp4 svojim snimkom. -->
     <div class="hero-media">
-      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-exterior.png">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="assets/hero-poster.png">
         <source src="assets/hero-video.mp4" type="video/mp4" />
       </video>
       <div class="hero-fallback" aria-hidden="true">
-        <image-slot id="hero-bg" shape="rect" fit="cover" src="assets/hero-exterior.png" placeholder="Ubacite hero video ili sliku"></image-slot>
+        <image-slot id="hero-bg" shape="rect" fit="cover" src="assets/hero-poster.png" placeholder="Ubacite hero video ili sliku"></image-slot>
       </div>
       <div class="hero-scrim"></div>
     </div>

@@ -366,9 +366,9 @@ h1, h2, h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; let
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
-  .nav-inner { justify-content: center; }
-  .brand { width: 100%; justify-content: center; margin-bottom: 0.15rem; }
-  .nav-links { width: 100%; justify-content: center; gap: 0.7rem 1rem; }
+  .nav-inner { justify-content: space-between; flex-wrap: nowrap; }
+  .brand { width: auto; justify-content: flex-start; margin-bottom: 0; }
+  .nav-links { width: auto; justify-content: flex-end; }
   .nav-links a, .nav.scrolled .nav-links a { font-size: 0.78rem; }
   .nav-links a:not(.nav-cta) { display: none; }
   .nav-cta, .nav.scrolled .nav-cta { padding: 0.6rem 1.1rem; }
