@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vila Javor — Boutique hotel na Kopaoniku</title>
+  <meta name="description" content="Vila Javor — boutique planinski smeštaj na Kopaoniku. Topla elegancija, priroda i mir." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="image-slot.js" defer></script>
+</head>
+<body>
+
+  <!-- ================= NAVIGACIJA ================= -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#pocetna" class="brand" aria-label="Vila Javor — početna">
+        <span class="brand-mark">VILA</span>
+        <span class="brand-name">JAVOR</span>
+        <span class="brand-sub">Kopaonik</span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Glavna navigacija">
+        <a href="#pocetna">Početna</a>
+        <a href="#o-nama">O nama</a>
+        <a href="#apartmani">Apartmani</a>
+        <a href="#pogodnosti">Pogodnosti</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#utisci">Utisci gostiju</a>
+        <a href="#kontakt">Kontakt</a>
+        <a href="#kontakt" class="btn btn-primary nav-cta">Rezervišite</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO / POČETNA ================= -->
+  <section class="hero" id="pocetna">
+    <!-- VIDEO POZADINA — snimljeno preko Higgsfield-a (bez teksta/logotipa/dugmadi).
+         Slobodno zameni assets/hero-video.mp4 svojim snimkom. -->
+    <div class="hero-media">
+      <video class="hero-video" autoplay muted loop playsinline poster="assets/hero-exterior.png">
+        <source src="assets/hero-video.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-fallback" aria-hidden="true">
+        <image-slot id="hero-bg" shape="rect" fit="cover" src="assets/hero-exterior.png" placeholder="Ubacite hero video ili sliku"></image-slot>
+      </div>
+      <div class="hero-scrim"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="kicker kicker-light">Kopaonik · Boutique planinski smeštaj</p>
+      <h1 class="hero-title">Planinski mir,<br />pažljivo osmišljen komfor</h1>
+      <p class="hero-desc">
+        Kamerni boutique hotel na obroncima Kopaonika.
+      </p>
+      <div class="hero-actions">
+        <a href="#apartmani" class="btn btn-primary">Pogledajte apartmane</a>
+        <a href="#kontakt" class="btn btn-outline-light">Rezervišite boravak</a>
+      </div>
+    </div>
+
+    <a href="#o-nama" class="hero-scroll" aria-label="Skrolujte nadole">
+      <span>Saznajte više</span>
+      <i data-lucide="chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ================= O NAMA ================= -->
+  <section class="section" id="o-nama">
+    <div class="container about about-single">
+      <div class="about-text reveal">
+        <p class="kicker">O nama</p>
+        <h2 class="section-title">Dom u planini, vođen mirom i detaljem</h2>
+        <p class="lead">
+          Vila Javor je zamišljena kao utočište — mesto gde se planinska
+          tišina spaja sa pažljivo biranim materijalima: masivnim drvetom,
+          prirodnim tkaninama i toplom svetlošću.
+        </p>
+        <p>
+          Svaki apartman je osmišljen da bude produžetak pejzaža koji ga
+          okružuje. Umesto velikih brojeva i gužve, ovde je fokus na
+          nekoliko gostiju, ličnoj usluzi i osećaju da ste zaista daleko od
+          svakodnevice — a ipak potpuno zbrinuti.
+        </p>
+
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">8</span>
+            <span class="stat-label">apartmana</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">2016</span>
+            <span class="stat-label">od godine</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5 min</span>
+            <span class="stat-label">do staza</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TRAKA SLIKA ================= -->
+  <section class="image-band reveal">
+    <div class="band-item">
+      <image-slot id="about-1" shape="rect" src="assets/lobby.png" placeholder="Enterijer / lobi"></image-slot>
+    </div>
+    <div class="band-item">
+      <image-slot id="about-2" shape="rect" src="assets/wood-detail.jpeg" placeholder="Detalj drveta"></image-slot>
+    </div>
+  </section>
+
+  <!-- ================= APARTMANI ================= -->
+  <section class="section section-tint" id="apartmani">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">Apartmani</p>
+        <h2 class="section-title">Prostori koji odišu toplinom</h2>
+        <p class="section-intro">
+          Tri tipa smeštaja, svaki sa sopstvenim karakterom. Cene i tačna
+          dostupnost dostupne su na upit.
+        </p>
+      </header>
+
+      <div class="rooms">
+        <!-- Apartman 1 -->
+        <article class="room reveal">
+          <div class="room-img">
+            <image-slot id="room-1" shape="rect" src="assets/studio.jpeg" placeholder="Studio apartman"></image-slot>
+            <span class="room-badge">2 osobe</span>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Studio „Smreka“</h3>
+            <p class="room-desc">Kamerni prostor sa kuhinjskim kutkom i pogledom na šumu — idealan za parove.</p>
+            <ul class="room-feats">
+              <li><i data-lucide="ruler"></i> 32 m²</li>
+              <li><i data-lucide="bed-double"></i> Francuski ležaj</li>
+              <li><i data-lucide="mountain"></i> Pogled na planinu</li>
+            </ul>
+            <div class="room-foot">
+              <span class="price">80 € <em>/ noć</em></span>
+              <a href="#kontakt" class="btn btn-ghost">Upit <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Apartman 2 -->
+        <article class="room reveal">
+          <div class="room-img">
+            <image-slot id="room-2" shape="rect" src="assets/deluxe.jpeg" placeholder="Deluxe apartman"></image-slot>
+            <span class="room-badge">2–3 osobe</span>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Deluxe „Javor“</h3>
+            <p class="room-desc">Prostraniji apartman sa odvojenim dnevnim boravkom i kaminom od prirodnog kamena.</p>
+            <ul class="room-feats">
+              <li><i data-lucide="ruler"></i> 48 m²</li>
+              <li><i data-lucide="flame"></i> Kamin</li>
+              <li><i data-lucide="sun"></i> Terasa</li>
+            </ul>
+            <div class="room-foot">
+              <span class="price">120 € <em>/ noć</em></span>
+              <a href="#kontakt" class="btn btn-ghost">Upit <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Apartman 3 -->
+        <article class="room reveal">
+          <div class="room-img">
+            <image-slot id="room-3" shape="rect" src="assets/suite.jpeg" placeholder="Suite apartman"></image-slot>
+            <span class="room-badge">4 osobe</span>
+          </div>
+          <div class="room-body">
+            <h3 class="room-title">Suite „Vrh“</h3>
+            <p class="room-desc">Naš najveći apartman sa dve spavaće sobe, terasom i panoramskim pogledom.</p>
+            <ul class="room-feats">
+              <li><i data-lucide="ruler"></i> 76 m²</li>
+              <li><i data-lucide="door-open"></i> 2 spavaće sobe</li>
+              <li><i data-lucide="sun"></i> Terasa</li>
+            </ul>
+            <div class="room-foot">
+              <span class="price">150 € <em>/ noć</em></span>
+              <a href="#kontakt" class="btn btn-ghost">Upit <i data-lucide="arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= POGODNOSTI ================= -->
+  <section class="section" id="pogodnosti">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">Pogodnosti</p>
+        <h2 class="section-title">Sve što čini boravak posebnim</h2>
+      </header>
+
+      <div class="amenities">
+        <div class="amenity reveal"><i data-lucide="flame"></i><h3>Kamin i topli kutci</h3><p>Prostori za opuštanje uz vatru nakon dana na planini.</p></div>
+        <div class="amenity reveal"><i data-lucide="waves"></i><h3>Spa &amp; wellness</h3><p>Sauna i zona za odmor tela i uma.</p></div>
+        <div class="amenity reveal"><i data-lucide="coffee"></i><h3>Doručak</h3><p>Domaći, sezonski doručak od lokalnih namirnica.</p></div>
+        <div class="amenity reveal"><i data-lucide="mountain-snow"></i><h3>Blizina staza</h3><p>Ski-staze i planinarske rute na dohvat ruke.</p></div>
+        <div class="amenity reveal"><i data-lucide="wifi"></i><h3>Brz Wi-Fi</h3><p>Pouzdana veza u celom objektu, za rad i opuštanje.</p></div>
+        <div class="amenity reveal"><i data-lucide="car"></i><h3>Parking</h3><p>Sopstveni parking uz objekat, bez naknade.</p></div>
+        <div class="amenity reveal"><i data-lucide="dog"></i><h3>Ljubimci dobrodošli</h3><p>Uz najavu, i vaši ljubimci su naši gosti.</p></div>
+        <div class="amenity reveal"><i data-lucide="concierge-bell"></i><h3>Lična usluga</h3><p>Domaćinski pristup i pomoć pri organizaciji boravka.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= GALERIJA ================= -->
+  <section class="section section-tint" id="galerija">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">Galerija</p>
+        <h2 class="section-title">Trenuci iz Vile Javor</h2>
+        <p class="section-intro">Kliknite na sliku za uvećani prikaz.</p>
+      </header>
+
+      <div class="gallery">
+        <div class="g-item g-big reveal"><image-slot id="gal-1" shape="rect" src="assets/gallery-exterior.jpeg" placeholder="Eksterijer"></image-slot></div>
+        <div class="g-item reveal"><image-slot id="gal-2" shape="rect" src="assets/gal-porch.jpeg" placeholder="Terasa"></image-slot></div>
+        <div class="g-item reveal"><image-slot id="gal-3" shape="rect" src="assets/gal-spa.jpeg" placeholder="Spa"></image-slot></div>
+        <div class="g-item reveal"><image-slot id="gal-4" shape="rect" src="assets/gal-landscape.jpeg" placeholder="Priroda"></image-slot></div>
+        <div class="g-item reveal"><image-slot id="gal-5" shape="rect" src="assets/gal-balcony.jpeg" placeholder="Terasa / pogled"></image-slot></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= UTISCI GOSTIJU ================= -->
+  <section class="section" id="utisci">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="kicker">Utisci gostiju</p>
+        <h2 class="section-title">Reči onih koji su boravili</h2>
+        <p class="section-intro">Ono što gosti pamte iz Vile Javor.</p>
+      </header>
+
+      <div class="testimonials reveal">
+        <div class="t-track" id="t-track">
+          <blockquote class="t-slide">
+            <div class="t-stars" aria-label="Ocena 5 od 5"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+            <p>„Savršen beg od grada — drvo, tišina i miris kamina. Vratili smo se kući potpuno odmorni i već planiramo sledeći boravak.“</p>
+            <footer><span class="t-name">Milica J.</span><span class="t-meta">Beograd</span></footer>
+          </blockquote>
+          <blockquote class="t-slide">
+            <div class="t-stars" aria-label="Ocena 5 od 5"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+            <p>„Osoblje neverovatno pažljivo, a pogled sa terase na zalazak sunca se ne zaboravlja. Dolazimo opet naredne zime.“</p>
+            <footer><span class="t-name">Nemanja P.</span><span class="t-meta">Novi Sad</span></footer>
+          </blockquote>
+          <blockquote class="t-slide">
+            <div class="t-stars" aria-label="Ocena 5 od 5"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+            <p>„Apartman topao i besprekorno čist, staze na par minuta hoda. Idealno za porodicu sa decom.“</p>
+            <footer><span class="t-name">Ana i Stefan</span><span class="t-meta">Niš</span></footer>
+          </blockquote>
+          <blockquote class="t-slide">
+            <div class="t-stars" aria-label="Ocena 5 od 5"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+            <p>„Doručak od domaćih namirnica bio je vrhunac svakog jutra. Prava boutique atmosfera, daleko od gužve.“</p>
+            <footer><span class="t-name">Jelena R.</span><span class="t-meta">Kragujevac</span></footer>
+          </blockquote>
+          <blockquote class="t-slide">
+            <div class="t-stars" aria-label="Ocena 5 od 5"><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div>
+            <p>„Mir, elegancija i toplina — tačno ono što smo tražili za godišnjicu. Hvala na predivnom gostoprimstvu.“</p>
+            <footer><span class="t-name">Marko V.</span><span class="t-meta">Beograd</span></footer>
+          </blockquote>
+        </div>
+        <div class="t-controls">
+          <button class="t-btn" id="t-prev" aria-label="Prethodni utisak"><i data-lucide="arrow-left"></i></button>
+          <div class="t-dots" id="t-dots"></div>
+          <button class="t-btn" id="t-next" aria-label="Sledeći utisak"><i data-lucide="arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= KONTAKT ================= -->
+  <section class="section section-dark" id="kontakt">
+    <div class="container contact">
+      <div class="contact-info reveal">
+        <p class="kicker kicker-light">Kontakt</p>
+        <h2 class="section-title">Rezervišite svoj boravak</h2>
+        <p class="contact-lead">Za upit o dostupnosti i cenama, javite nam se — odgovaramo lično.</p>
+
+        <ul class="contact-list">
+          <li><i data-lucide="map-pin"></i><div><span>Adresa</span><strong>Jaram bb, 36354 Kopaonik</strong></div></li>
+          <li><i data-lucide="phone"></i><div><span>Telefon</span><strong>[ +381 ·· ··· ···· ]</strong></div></li>
+          <li><i data-lucide="mail"></i><div><span>E-pošta</span><strong>[ info@vila-javor.rs ]</strong></div></li>
+          <li><i data-lucide="clock"></i><div><span>Prijava / odjava</span><strong>14:00 / 11:00</strong></div></li>
+        </ul>
+
+        <div class="contact-social">
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"></rect><circle cx="12" cy="12" r="4.2"></circle><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"></circle></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor"><path d="M14 8.5V6.9c0-.7.2-1.1 1.2-1.1H16.5V3.1C16.1 3 15.3 3 14.4 3c-1.9 0-3.2 1.2-3.2 3.4v2.1H9v2.8h2.2V21h2.8v-7.7h2.1l.4-2.8H14z"></path></svg></a>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" id="contact-form" novalidate>
+        <div class="field">
+          <label for="f-name">Ime i prezime</label>
+          <input type="text" id="f-name" name="name" placeholder="Vaše ime" />
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="f-email">E-pošta</label>
+            <input type="email" id="f-email" name="email" placeholder="vas@email.rs" />
+          </div>
+          <div class="field">
+            <label for="f-dates">Termin</label>
+            <input type="text" id="f-dates" name="dates" placeholder="npr. 10.–14. mart" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-msg">Poruka</label>
+          <textarea id="f-msg" name="message" rows="4" placeholder="Broj gostiju, tip apartmana, pitanja…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Pošaljite upit</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================= FUTER ================= -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark">VILA</span><span class="brand-name">JAVOR</span>
+        <p>Boutique planinski smeštaj · Kopaonik</p>
+      </div>
+      <nav class="footer-nav" aria-label="Futer navigacija">
+        <a href="#pocetna">Početna</a>
+        <a href="#o-nama">O nama</a>
+        <a href="#apartmani">Apartmani</a>
+        <a href="#pogodnosti">Pogodnosti</a>
+        <a href="#galerija">Galerija</a>
+        <a href="#utisci">Utisci gostiju</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
+      <p class="footer-copy">© <span id="year">2026</span> Vila Javor · Sva prava zadržana</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox za galeriju -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Zatvori"><i data-lucide="x"></i></button>
+    <button class="lightbox-nav lb-prev" id="lightbox-prev" aria-label="Prethodna slika"><i data-lucide="chevron-left"></i></button>
+    <button class="lightbox-nav lb-next" id="lightbox-next" aria-label="Sledeća slika"><i data-lucide="chevron-right"></i></button>
+    <div class="lightbox-body" id="lightbox-body"></div>
+  </div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
